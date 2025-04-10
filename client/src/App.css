@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+
+}
+.main-section {
+  background: url('/background-image.png') center / cover no-repeat fixed;
+}
+
