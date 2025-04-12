@@ -2,6 +2,7 @@ import express from "express";
 import todoRouter from './routes/todo.route.js'
 import getTodoRouter from './routes/getTodo.router.js'
 import addTodoRouter from './routes/addTodo.router.js'
+import updateTodoRouter from './routes/update.router.js'
 
 const app = express();
 app.use(express.json())
@@ -15,6 +16,7 @@ app.get("/", (req, res) => {
 app.use('/api/v1/todo',todoRouter)
 app.use('/api/v1/todo/newtodo',addTodoRouter)
 app.use('/api/v1/todo',getTodoRouter)
+app.use('/api/v1/todo',updateTodoRouter)
 
 app.listen(port, () => {
   console.log(`server is running on port no ${port}`);
